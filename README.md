@@ -10,6 +10,7 @@ which was a fork from [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 - added __git_ps1 code into this script
 - added PS1_RED color variable
-- added exit code status to prompt, which is red if it's a none zero exit code.
+- added exit code status to prompt, which is red if it's a non-zero exit code.
 - fixed the bash prompt so root would be a # instead of a $
-- added it so git status was parsed. + = untracked files.  ± = changes to be commited.
+- added it so git status was parsed. + = untracked files.  ± = changes to be commited. ~ = files have been modified
+- changed to include modified in the changes to be commited.

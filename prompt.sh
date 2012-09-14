@@ -23,9 +23,9 @@ __git_ps1 ()
 }
 
 __parse_git_status () {
-  gitstat=$(git status 2>/dev/null | grep '\(# Untracked\|# Changes\|# Changed but not updated:\)')
+  gitstat=$(git status 2>/dev/null | grep '\(# Untracked\|# Changes\|# Changed but not updated:\|modified:\)')
 
-  if [[ $(echo ${gitstat} | grep -c "^# Changes to be committed:") > 0 ]]; then
+  if [[ $(echo ${gitstat} | grep -c "^# Changes to be committed:\|modified:") > 0 ]]; then
         echo -n "$GIT_PROMPT_DIRTY"
   fi
 
